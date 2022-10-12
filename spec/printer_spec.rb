@@ -13,10 +13,23 @@ RSpec.describe Printer do
     end
 
     describe '.print_item' do
-        subject { described_class.print_item(1) }
+        subject { described_class.print_item(item_id, item_count) }
 
-        it 'prints headline' do
-            expect{subject}.to output('1, ').to_stdout
+        let(:item_id) { 1 }
+        let(:item_count) { 1 }
+
+        it 'prints item' do
+            expect { subject }.to output('1').to_stdout
+        end
+
+        describe 'when many items' do
+            subject { described_class.print_item(item_id, item_count) }
+
+            let(:item_count) { 2 }
+
+            it 'prints many items' do
+                expect { subject }.to output('1, 1').to_stdout
+            end
         end
     end
 
