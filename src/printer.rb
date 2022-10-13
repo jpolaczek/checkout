@@ -17,6 +17,7 @@ class Printer
         end
 
         def print_total(total_price)
+            puts ''
             puts (TOTAL_PRICE + Money.from_cents(total_price, CURRENCY).format)
         end
     end    

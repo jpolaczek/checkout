@@ -1,0 +1,12 @@
+install gems
+`bundle install`
+
+run with hardcoded scans
+`ruby app.rb`
+
+run specs
+`bundle exec rspec spec`
+
+Assumptions:
+1. item data consistency
+2. only one promotional rule per item
