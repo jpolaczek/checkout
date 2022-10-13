@@ -35,6 +35,7 @@ class Checkout
 
             printer.print_item(id, item_count)
         end
+
         printer.print_total(total_price_calculator.call)
     end
 
