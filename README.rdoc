@@ -1,11 +1,11 @@
 install gems
-`bundle install`
+```bundle install```
 
 run with hardcoded scans
-`ruby app.rb`
+```ruby app.rb```
 
 run specs
-`bundle exec rspec spec`
+```bundle exec rspec spec`
 
 Assumptions:
 1. item data consistency
