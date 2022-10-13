@@ -13,12 +13,11 @@ class Printer
         end
 
         def print_item(print_item, item_count)
-            (item_count-1).times { print print_item.to_s + COMMA }
-            print print_item.to_s
+            (item_count).times { print print_item.to_s + COMMA }
         end
 
         def print_total(total_price)
-            print TOTAL_PRICE + Money.from_cents(total_price, CURRENCY).format
+            puts (TOTAL_PRICE + Money.from_cents(total_price, CURRENCY).format)
         end
     end    
 end

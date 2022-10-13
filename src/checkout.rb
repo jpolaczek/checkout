@@ -2,7 +2,6 @@ require "#{$root}/src/printer"
 require "#{$root}/src/scanner"
 require "#{$root}/src/calculator/item_price"
 require "#{$root}/src/calculator/total_price"
-require 'byebug'
 
 class Checkout
     def initialize(promotional_rules = nil,

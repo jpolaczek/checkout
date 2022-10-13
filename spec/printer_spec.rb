@@ -19,7 +19,7 @@ RSpec.describe Printer do
         let(:item_count) { 1 }
 
         it 'prints item' do
-            expect { subject }.to output('1').to_stdout
+            expect { subject }.to output('1, ').to_stdout
         end
 
         describe 'when many items' do
@@ -28,7 +28,7 @@ RSpec.describe Printer do
             let(:item_count) { 2 }
 
             it 'prints many items' do
-                expect { subject }.to output('1, 1').to_stdout
+                expect { subject }.to output('1, 1, ').to_stdout
             end
         end
     end
@@ -37,7 +37,7 @@ RSpec.describe Printer do
         subject { described_class.print_total(112) }
 
         it 'prints total price' do
-            expect{subject}.to output('Total price expected: £1.12').to_stdout
+            expect{subject}.to output("Total price expected: £1.12\n").to_stdout
         end
     end
 end
