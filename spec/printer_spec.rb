@@ -37,7 +37,7 @@ RSpec.describe Printer do
         subject { described_class.print_total(112) }
 
         it 'prints total price' do
-            expect{subject}.to output("Total price expected: £1.12\n").to_stdout
+            expect{subject}.to output("\nTotal price expected: £1.12\n").to_stdout
         end
     end
 end
